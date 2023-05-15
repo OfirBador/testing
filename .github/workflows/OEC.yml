@@ -12,4 +12,4 @@ jobs:
       
       - name: Run Python script
         run: |
-          testing/code1.py
+          code1.py
