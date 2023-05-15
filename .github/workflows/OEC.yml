@@ -6,10 +6,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
       
       - name: Run Python script
-        run: OfirBador/testing/code1.py
+        run: |
+          testing/code1.py
