@@ -1,0 +1,17 @@
+name: Directory Change Workflow
+
+on:
+  push:
+    paths:
+      - 'OfirBador/testing'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      
+      - name: Run Python script
+        run: python directory/code1.py
