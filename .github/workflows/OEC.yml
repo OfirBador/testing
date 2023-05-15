@@ -2,8 +2,6 @@ name: Directory Change Workflow
 
 on:
   push:
-    paths:
-      - 'OfirBador/testing'
 
 jobs:
   build:
