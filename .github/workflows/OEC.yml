@@ -3,7 +3,7 @@ name: Directory Change Workflow
 on:
   push:
     paths:
-      - 'testing/file.txt'
+      - 'file.txt'
   workflow_dispatch:
 
 jobs:
