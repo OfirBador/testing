@@ -2,14 +2,17 @@ name: Directory Change Workflow
 
 on:
   push:
+    paths:
+      - 'testing/file.txt'
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
       
       - name: Run Python script
-        run: |
-          code1.py
+        run: python testing/code1.py
