@@ -1,2 +1,2 @@
-new
-b
+Yondu dead
+Yondu dead pods successfully removed
