@@ -1,9 +1,9 @@
 name: Directory Change Workflow
 
 on:
-  push:
-    paths:
-      - 'file.txt'
+#   push:
+#     paths:
+#       - 'file.txt'
   workflow_dispatch:
 
 jobs:
