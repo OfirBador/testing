@@ -1,1 +1,2 @@
-Yondu dead pods successfully removed
+2023-05-16T12:41:50.437959401 Yondu dead
+2023-05-16T12:42:50.437959401 Yondu dead pods successfully removed
