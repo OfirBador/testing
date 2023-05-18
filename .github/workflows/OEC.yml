@@ -1,9 +1,9 @@
 name: Trigger Scripts based on log_message.txt
 
 on:
-#   push:
-#     paths:
-#       - 'OEC/log_message.txt'
+  push:
+    paths:
+      - 'OEC/log_message.txt'
   workflow_dispatch:
 
 jobs:
