@@ -3,7 +3,7 @@ name: Trigger Scripts based on File Contant
 on:
 #   push:
 #     paths:
-#       - 'file.txt'
+#       - 'OEC/log_message.txt'
   workflow_dispatch:
 
 jobs:
@@ -23,4 +23,4 @@ jobs:
           
       - name: Run Trigger Scripts
         run: |
-          python trigger_scripts.py
+          python OEC/trigger_scripts.py
