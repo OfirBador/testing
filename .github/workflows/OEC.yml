@@ -1,4 +1,4 @@
-name: Trigger Scripts based on File Contant
+name: Trigger Scripts based on log_message.txt
 
 on:
 #   push:
