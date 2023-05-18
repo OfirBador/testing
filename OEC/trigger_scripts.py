@@ -12,11 +12,11 @@ def run_script(script_name):
 
 
 def check_message_to_trigger_script(automation_list_insert):
-    with open('/Users/obador/PycharmProjects/OEC/testing/OEC/log_message.txt', 'r') as file:
+    with open('OEC/log_message.txt', 'r') as file:
         content = file.read()
     for name_and_script in automation_list_insert:
         if name_and_script[0] in content:
-            run_script(f'/Users/obador/PycharmProjects/OEC/testing/Automation_Scripts/{name_and_script[1]}')
+            run_script(f'Automation_Scripts/{name_and_script[1]}')
 
 
 def main():
