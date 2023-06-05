@@ -12,7 +12,7 @@ def get_cli_args():
     )
     return parser.parse_args()
 
-def print_secret(secret1)
+def print_secret(secret1):
     try:
         print(secret1)
     except:
