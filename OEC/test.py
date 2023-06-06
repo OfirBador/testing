@@ -4,7 +4,7 @@ import os
 secret_value1 = os.environ.get('SECRET_VALUE_1')
 secret_value2 = os.environ.get('SECRET_VALUE_2')
 
-automation_list = [['test1', 'test1.py', secret_value1],
+automation_list = [['test1', 'test1.py', [secret_value1]],
                    ['test2', 'test2.py', [secret_value1, secret_value2]]]
 
 
