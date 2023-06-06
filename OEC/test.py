@@ -1,8 +1,9 @@
 import os
+import subprocess
 
-secret_value = os.environ.get('TEST')
+secret_value = os.environ.get('SECRET_VALUE')
 
 if secret_value:
-    print("Secret value:", secret_value)
+    subprocess.run(['python', 'test2.py', secret_value])
 else:
     print("Secret not found or not set.")
