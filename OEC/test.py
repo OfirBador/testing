@@ -1,5 +1,5 @@
 import subprocess
 
-workflow_name = "your-workflow-name"
+workflow_name = "test1.yml"
 
-subprocess.run(["gh", "workflow", "run", test1.yml], check=True)
+subprocess.run(["gh", "workflow", "run", workflow_name], check=True)
