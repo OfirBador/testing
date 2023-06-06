@@ -20,4 +20,4 @@ jobs:
           
       - name: Run Trigger Scripts
         run: |
-          python OEC/test.py
+          python OEC/test.py --test_secret ${{secrets.TEST}}
