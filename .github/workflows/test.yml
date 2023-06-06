@@ -1,4 +1,4 @@
-name: check secrets in script
+name: trigger workflows
 
 on:
   workflow_dispatch:
