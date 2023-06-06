@@ -17,8 +17,9 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip 
-          python -m pip install -r OEC/requirements.txt
           
       - name: Run Trigger Scripts
+        env:
+          SECRET_VALUE: ${{ secrets.TEST }}
         run: |
-          python OEC/test.py --test ${{secrets.TEST}}
+          python OEC/test.py 
