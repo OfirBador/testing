@@ -8,9 +8,10 @@ automation_list = [['test1', 'test1.py', [secret_value1]],
                    ['test2', 'test2.py', [secret_value1, secret_value2]]]
 
 
-def run_script(script_name, secret_list):
+def run_script(script_name, script_args):
     try:
-        subprocess.run(['python', script_name, secret_list], check=True)
+        command = ['python', script_name] + script_args
+        subprocess.run(command, check=True)
     except subprocess.CalledProcessError as e:
         print(f"Error occurred while running {script_name}: {e}")
 
