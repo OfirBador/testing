@@ -6,7 +6,7 @@ chosen_workflow = "test1.yml"
 # Trigger the chosen workflow using the GitHub API
 headers = {
     "Accept": "application/vnd.github.v3+json",
-    "Authorization": "Bearer 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"
+    "Authorization": "Bearer "
 }
 repo_owner = "OfirBador"
 repo_name = "testing"
