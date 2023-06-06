@@ -1,6 +1,6 @@
 import sys
 
-if sys.argv[2][0] == '1234':
+if sys.argv[1][0] == '1234':
     print(" 0 ok it's works")
 
 
