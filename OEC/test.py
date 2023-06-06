@@ -1,36 +1,31 @@
-import requests
-import argparse
+import subprocess
+import os 
 
-def get_cli_args():
-    parser = argparse.ArgumentParser()
+secret_value1 = os.environ.get('SECRET_VALUE_1')
+secret_value2 = os.environ.get('SECRET_VALUE_2')
 
-    parser.add_argument(
-        '--git_secret', required=True, dest='git_secret', help='GIT_TOKEN'
-    )
-    return parser.parse_args()
+automation_list = [['test1', 'test1.py', [secret_value1]],
+                   ['test2', 'test2.py', [secret_value1, secret_value2]]
+
+
+def run_script(script_name, secret_list):
+    try:
+        subprocess.run(['python', script_name], check=True)
+    except subprocess.CalledProcessError as e:
+        print(f"Error occurred while running {script_name}: {e}")
+
+
+def check_message_to_trigger_script(automation_list_insert):
+    with open('OEC/log_message.txt', 'r') as file:
+        content = file.read()
+    for name_and_script in automation_list_insert:
+        if name_and_script[0] in content:
+            run_script(f'Automation_Scripts/{name_and_script[1]}',name_and_script[2])
 
 
 def main():
-    args = get_cli_args()
-    git_secret = args.git_secret
-    print("in")
-    # Perform checks and determine which workflow to trigger
-    chosen_workflow = "test1.yml"
+    check_message_to_trigger_script(automation_list)
 
-    # Trigger the chosen workflow using the GitHub API
-    headers = {
-        "Accept": "application/vnd.github.v3+json",
-        "Authorization": f"Bearer {git_secret}"
-    }
-    repo_owner = "OfirBador"
-    repo_name = "testing"
-    api_url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/actions/workflows/{chosen_workflow}/dispatches"
-    response = requests.post(api_url, headers=headers)
-
-    if response.status_code == 204:
-        print("Workflow run triggered successfully.")
-    else:
-        print("Failed to trigger the workflow run.")
 
 if __name__ == '__main__':
     main()
