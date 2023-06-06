@@ -9,7 +9,7 @@ def get_cli_args():
     parser = argparse.ArgumentParser()
 
     parser.add_argument(
-        '--test', required=True, dest='TEST', help='test'
+        '--test', required=True, dest='test', help='test'
     )
     return parser.parse_args()
 
@@ -21,7 +21,7 @@ def print_secret(secret1):
     
 def main():
     args = get_cli_args()
-    print_secret(args.TEST)
+    print_secret(args.test)
 
 if __name__ == '__main__':
     main()
