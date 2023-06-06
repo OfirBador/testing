@@ -1,4 +1,7 @@
 import sys
+from logging2 import Logger
+
+logger = Logger("message")
 
 for item in sys.argv:
     print(item)
@@ -10,3 +13,4 @@ try:
 except:
     print(" not good")
 
+logger.info("gol")
