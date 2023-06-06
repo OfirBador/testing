@@ -20,7 +20,7 @@ def check_message_to_trigger_script(automation_list_insert):
         content = file.read()
     for name_and_script in automation_list_insert:
         if name_and_script[0] in content:
-            run_script(f'Automation_Scripts/{name_and_script[1]}',name_and_script[2])
+            run_script(f'OEC/{name_and_script[1]}',name_and_script[2])
 
 
 def main():
