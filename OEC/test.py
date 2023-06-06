@@ -1,5 +1,5 @@
 import requests
-
+print("in")
 # Perform checks and determine which workflow to trigger
 chosen_workflow = "test1.yml"
 
