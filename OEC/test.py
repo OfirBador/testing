@@ -22,7 +22,7 @@ def print_secret(secret1):
 def main():
     args = get_cli_args()
     print_secret(args.test)
-    if args.test == '1234'
+    if args.test == '1234':
         print("ok")
 
 if __name__ == '__main__':
