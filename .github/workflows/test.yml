@@ -20,6 +20,7 @@ jobs:
           
       - name: Run Trigger Scripts
         env:
-          SECRET_VALUE: ${{ secrets.TEST }}
+          SECRET_VALUE1: ${{ secrets.TEST }}
+          SECRET_VALUE2: ${{ secrets.TEST2 }}
         run: |
           python OEC/test.py 
