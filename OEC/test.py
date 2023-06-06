@@ -5,14 +5,14 @@ def get_cli_args():
     parser = argparse.ArgumentParser()
 
     parser.add_argument(
-        '--git_secret', required=True, dest='git_secret', help='GIT_SECRET'
+        '--git_secret', required=True, dest='git_secret', help='GIT_TOKEN'
     )
     return parser.parse_args()
 
 
 def main():
     args = get_cli_args()
-    args.git_secret
+    git_secret = args.git_secret
     print("in")
     # Perform checks and determine which workflow to trigger
     chosen_workflow = "test1.yml"
