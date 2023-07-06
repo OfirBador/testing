@@ -9,7 +9,7 @@ sys.path.append(parent_dir)
 from function.fun import *
 
 def main():
-    fun.fun1()
+    fun1()
 
 
 if __name__ == '__main__':
