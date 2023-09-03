@@ -20,4 +20,4 @@ jobs:
           
       - name: Run Trigger Scripts
         run: |
-          python OEC/test_functions/functions_test.py 
+          python test_functions/functions_test.py 
