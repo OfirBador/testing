@@ -1,4 +1,4 @@
-from scripts import script1
+
 from pathlib import Path
 
 def main():
